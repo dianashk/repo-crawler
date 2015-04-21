@@ -1,0 +1,17 @@
+{
+  "name": "repo-crawler",
+  "version": "0.0.1",
+  "description": "browse a git org and generate dependency docs in markdown format",
+  "main": "app.js",
+  "keywords": [
+    "git",
+    "dependencies"
+  ],
+  "author": "Diana Shkolnikov <dianashk@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.9.0",
+    "github-api": "^0.10.4",
+    "request": "^2.55.0"
+  }
+}
