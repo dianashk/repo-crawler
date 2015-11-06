@@ -1,16 +1,10 @@
 # repo-walker
 
-<<<<<<< HEAD
-Utility that traverses an org in github and does stuff with each repository. 
-
-## usage
-=======
 Collection of utilities that traverse an org in github and do stuff with each repository. 
 
 ## Dependency outline generator
 
 ### usage
->>>>>>> 1436ad374ea87c17e4642a22ff3712cd79e7620e
 
 ```bash
 $ node dependencies.js <github-auth-token> <org-name>

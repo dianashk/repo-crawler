@@ -1,11 +1,15 @@
 {
   "name": "repo-crawler",
-  "version": "0.0.1",
-  "description": "browse a git org and generate dependency docs in markdown format",
+  "version": "1.0.0",
+  "description": "automate merge master to prod, and generate dependency outlines for node.js repos in org",
   "main": "app.js",
   "keywords": [
     "git",
-    "dependencies"
+    "dependencies",
+    "merge",
+    "automated",
+    "repository",
+    "organization"
   ],
   "author": "Diana Shkolnikov <dianashk@gmail.com>",
   "license": "MIT",
