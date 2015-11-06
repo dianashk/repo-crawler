@@ -6,7 +6,7 @@ var util = require('util');
 var exec = require('child_process').exec;
 
 if (process.argv.length !== 4) {
-  console.error('Usage: node app.js <github-auth-token> <org-name>');
+  console.error('Usage: node dependencies.js <github-auth-token> <org-name>');
   process.exit(1);
 }
 
