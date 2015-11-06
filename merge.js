@@ -1,9 +1,6 @@
 var async = require('async');
 var Github = require('github-api');
-var request = require('request');
-var fs = require('fs');
 var util = require('util');
-var exec = require('child_process').exec;
 var colors = require('colors');
 
 if (process.argv.length !== 4) {
