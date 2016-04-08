@@ -1,8 +1,16 @@
 {
   "name": "repo-crawler",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "automate merge master to prod, and generate dependency outlines for node.js repos in org",
-  "main": "app.js",
+  "bin": {
+    "repo-crawler": "bin/repo-crawler.js"
+  },
+  "scripts": {
+    "start": "./bin/repo-crawler.js",
+    "merge": "./bin/merge.js",
+    "repo_list": "./bin/repo_list.js",
+    "dependencies": "./bin/dependencies.js"
+  },
   "keywords": [
     "git",
     "dependencies",
@@ -17,6 +25,8 @@
     "async": "^0.9.0",
     "colors": "^1.1.2",
     "github-api": "^0.10.4",
-    "request": "^2.55.0"
+    "minimist": "^1.2.0",
+    "request": "^2.55.0",
+    "temp": "^0.8.3"
   }
 }
