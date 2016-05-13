@@ -1,9 +1,9 @@
 var async = require('async');
 var Github = require('github-api');
 var util = require('util');
+var utils = require('./utils');
 
-
-function doit(head, base, token, org, callback) {
+function merge(head, base, token, org, callback) {
 
   var context = {
     git: new Github({
@@ -19,42 +19,14 @@ function doit(head, base, token, org, callback) {
 
   async.waterfall(
     [
-      getOrgInfo.bind(context),
-      getRepos.bind(context),
+      utils.getOrgInfo.bind(context),
+      utils.getRepos.bind(context),
       mergeToProd.bind(context)
     ],
     function (err) {
       callback(err, context.output);
     }
   );
-}
-
-function getOrgInfo(callback) {
-  var context = this;
-
-  var user = context.git.getUser();
-  user.show(context.org, function (err, info) {
-    if (err) {
-      return callback(err);
-    }
-
-    context.org = info;
-    callback();
-  });
-}
-
-/**
- * @param {function} callback (err, packages)
- */
-function getRepos(callback) {
-  var context = this;
-  var org = context.org.name;
-  var user = context.git.getUser();
-
-  user.orgRepos(org, function (err, repos) {
-    context.repos = repos;
-    callback();
-  });
 }
 
 function mergeToProd(callback) {
@@ -170,4 +142,4 @@ function createPR(repo, callback) {
 }
 
 
-module.exports = doit;
+module.exports = merge;
