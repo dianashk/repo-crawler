@@ -12,6 +12,9 @@ switch (process.argv[2]) {
   case 'repo_list':
     childProcess.fork('./bin/repo_list.js', process.argv);
     break;
+  case 'travis_config':
+    childProcess.fork('./bin/travis_config.js', process.argv);
+    break;
   default:
     console.error('Usage: repo-crawler dependencies|merge|repo_list [params]');
 }
